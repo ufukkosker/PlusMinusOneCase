@@ -46,6 +46,7 @@ final class ProductDetailCell: UITableViewCell, NibLoadable {
         circleCountDownLabel.labelTextColor = .orange
         circleCountDownLabel.start(beginingValue: 5, interval: 1)
         
+        starRatingView.rating = Float(model.commentCounts.averageRating)
         productNameLabel.text = model.name
         productDescriptionLabel.text = model.desc
         likeCountLabel.text = "\(model.likeCount)"
